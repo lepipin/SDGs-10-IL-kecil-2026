@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+}
+
+.t5t {
+    width: 95%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.carrot {
+    text-align: center;
+    font-family: play;
+    color: #FDC95E;
+    font-size: 40px;
+
+    -webkit-text-stroke: 5px #fffdf0;
+    paint-order: stroke fill;
+
+    margin: 15px 0 10px;
+}
+
+.header + .t5t {
+    margin-top: 0;
+}
+
+.t5t + .carrot {
+    margin-top: 10px;
+}
+
+.kondisi {
+    width: 90%;
+    margin: 15px auto;
+}
+
+.kondisi-row {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.flez {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.flez > div {
+    width: 100%;
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 3px;
+}
+
+.flez img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.colr {
+    border: 3px solid #FF92C3;
+}
+
+.coul {
+    border: 3px solid #FDC95E;
+}
+
+.poul {
+    border: 3px solid #5aa5e7;
+}
+
+.teks-kondisi {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.isi {
+    background-color: #fffdf0;
+    color: #7e6449;
+    border-radius: 12px;
+    padding: 25px;
+    width: 100%;
+}
+
+.isi h2 {
+    margin-top: 0;
+}
+
+.isi p {
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.pad3 {
+    background-color: #fffdf0;
+    border: 3px solid #FF92C3;
+    border-radius: 15px;
+
+    width: 90%;
+    min-height: 200px;
+
+    margin: 40px auto;
+    padding: 30px 40px;
+
+    color: #7e6449;
+}
+
+.huh {
+    color: #FDC95E;
+    font-family: sixsev;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.pad3 p {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.section-card {
+    background-color: #fffdf0;
+    border-radius: 15px;
+
+    width: 90%;
+    margin: 30px auto;
+    padding: 25px 35px;
+
+    color: #7e6449;
+}
+
+.section-card h2 {
+    font-family: beau;
+    color: #5aa5e7;
+}
+
+.section-card p {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.dampak {
+    border: 3px solid #FDC95E;
+}
+
+.pihak {
+    border: 3px solid #5aa5e7;
+}
+
+@font-face {
+    font-family: play;
+    src: url("Love Craft.ttf");
+}
+
+@font-face {
+    font-family: beau;
+    src: url("infiilus.otf");
+}
+
+@font-face {
+    font-family: sixsev;
+    src: url("DK Jambo.otf");
+}
+
+@font-face {
+    font-family: beaut;
+    src: url("Amelina Script.ttf");
+}
+
+@font-face {
+    font-family: telow;
+    src: url("Ragniart.ttf");
+}
+
+@media (max-width: 768px) {
+
+    .pada,
+    .pad3,
+    .section-card {
+        width: 94%;
+        padding: 20px;
+    }
+
+    .kondisi {
+        width: 94%;
+    }
+
+    .kondisi-row {
+        grid-template-columns: 1fr;
+    }
+
+    .flez {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flez > div {
+        height: 160px;
+    }
+
+    .fld {
+        font-size: 18px;
+    }
+
+    .carrot {
+        font-size: 32px;
+    }
+
+    .isi {
+        padding: 18px;
+    }
+
+    .isi h2 {
+        font-size: 23px;
+    }
+}
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+.section-card {
+    background-color: #fff5df;
+    border: 3px solid #9FD35D;
+    border-radius: 18px;
+    padding: 25px;
+    min-height: 250px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+@font-face {
+    font-family: seg;
+    src: url(Darling.ttf);
+}
+
+.section-card h2 {
+    color: #FF92C3;
+    font-family: seg;
+    font-size:34px;
+    margin-bottom: 15px;
+}
+
+.section-card p {
+    color: #444;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.section-card:hover {
+    transform: translateY(-8px);
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.falsity{
+    border: 3px solid #5aa5e7;
+    border-radius: 12px;
+}
+
+.cruelty{
+    border: 3px solid #FF92C3;
+    border-radius: 12px;
+}
+
+.skibid{
+    color: #9FD35D;
+    font-family: kris;
+    font-size: 30px;
+}
+
+.heir{
+    color: #FDC95E;
+    font-size: 30;
+    font-family: cat;
+}
+
+@font-face {
+    font-family: cat;
+    src: url(infiilus.otf);
+}
+
+@font-face {
+    font-family: kris;
+    src: url(DK\ Jambo.otf);
+}
+
+.polr{
+     border: 3px solid #9FD35D;
+}

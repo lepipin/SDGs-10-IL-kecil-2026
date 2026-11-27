@@ -1,0 +1,76 @@
+div.biodata {
+    margin: 30px auto;
+    width: 800px;
+    background-color: #fffdf0;
+    border-radius: 12px;
+    border: 3px solid #FF92C3;
+    padding: 30px;
+    color: #64583D;
+
+    box-sizing: border-box;
+}
+
+div.content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+div.foto {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 6px solid #FCDA92;
+}
+
+div.foto img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+p.Eksternal {
+    font-family: "jaz";
+    font-size: 12.5pt;
+    margin: 0;
+    transform: none;
+}
+
+@font-face {
+    font-family: jaz;
+    src: url("Baby Doll.ttf");
+}
+
+.disk2{
+     margin: 30px auto;
+    width: 1000px;
+    background-color: #fffdf0;
+    border-radius: 12px;
+    border: 3px solid #FDC95E;
+    padding: 30px;
+    box-sizing: border-box;   
+}
+
+.luh{
+    color: #64583D;
+    font-family: jaz;
+}
+
+.blug{
+    color: #5aa5e7;
+    font-family: clih;
+}
+
+@font-face {
+    font-family: clih;
+    src: url(DK\ Jambo.otf);
+}

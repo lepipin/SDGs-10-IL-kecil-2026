@@ -1,0 +1,85 @@
+
+/* RESET KHUSUS NAVBAR */
+.topnav,
+.topnav * {
+    box-sizing: border-box;
+}
+
+/* NAVBAR UTAMA */
+.topnav {
+    width: 100%;
+    height: 48px;
+    min-height: 48px;
+    background-color: #5aa5e7;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+/* DAFTAR MENU */
+.topnav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 100%;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* SETIAP MENU */
+.topnav ul li {
+    position: relative;
+    flex-shrink: 0;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+}
+
+/* TULISAN MENU */
+.topnav ul li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 14px;
+    font-family: Jasper, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1;
+    color: #fafc7c;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* HOVER */
+.topnav a:hover {
+    background-color: #9fd861;
+    color: white;
+}
+
+/* DROPDOWN */
+.topnav .cont {
+    display: none;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    min-width: 180px;
+    background-color: #FA5497;
+    z-index: 10000;
+}
+
+.topnav .cont a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 42px;
+    padding: 0 16px;
+    color: white;
+    white-space: normal;
+}
+
+.topnav li.dropdown:hover > .cont {
+    display: block;
+}
+

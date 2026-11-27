@@ -1,0 +1,738 @@
+.topnav {
+    zoom: 1.35;
+}
+
+body{
+    background-image: url(image\ \(2\).png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.wedding-section {
+    padding: 55px 25px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #263238;
+}
+
+.wedding-heading {
+    margin-bottom: 35px;
+}
+
+.wedding-subtitle {
+    color: #4c9f38;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.wedding-heading h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.wedding-heading p {
+    color: #777;
+    font-size: 14px;
+}
+
+.wedding-interactive {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+    align-items: center;
+    justify-content: center;
+    gap: clamp(15px, 3vw, 45px);
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.wedding-cake {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    margin: 0 auto;
+    transition: transform 0.5s ease;
+}
+
+.wedding-cake.has-active {
+    transform: translateX(-10px);
+}
+
+.cake-top {
+    width: 190px;
+    padding: 13px;
+    background: #2c3e50;
+    color: white;
+    border-radius: 12px 12px 5px 5px;
+    position: relative;
+}
+
+.cake-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cake-number {
+    background: #ffffff30;
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.cake-label h3 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.cake-label p {
+    margin: 4px 0 0;
+    font-size: 10px;
+}
+
+.cake-layer {
+    padding: 22px 25px;
+    color: white;
+    clip-path: polygon(7% 0, 93% 0, 100% 100%, 0 100%);
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.economy {
+    width: 55%;
+    background: #fd6925;
+}
+
+.society {
+    width: 78%;
+    background: #26bde2;
+}
+
+.biosphere {
+    width: 100%;
+    background: #3f7e44;
+}
+
+.layer-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.layer-title > span {
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.layer-title h3 {
+    font-size: 17px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.layer-title p {
+    font-size: 11px;
+    margin: 4px 0 0;
+}
+
+.goal-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 10px 0;
+}
+
+.goal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 7px;
+    background: white;
+    color: #7e6449;
+    font-weight: bold;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.goal:hover {
+    transform: scale(1.2);
+}
+
+.layer-desc {
+    font-size: 11px;
+    margin: 12px 0 0;
+    opacity: 0.95;
+}
+
+.g1  { background: #e5243b; color: white; }
+.g2  { background: #dda63a; color: white; }
+.g3  { background: #4c9f38; color: white; }
+.g4  { background: #c5192d; color: white; }
+.g5  { background: #ff3a21; color: white; }
+.g6  { background: #26bde2; color: white; }
+.g7  { background: #fcc30b; color: white; }
+.g8  { background: #a21942; color: white; }
+.g9  { background: #fd6925; color: white; }
+.g10 { background: #dd1367; color: white; }
+.g11 { background: #fd9d24; color: white; }
+.g12 { background: #bf8b2e; color: white; }
+.g13 { background: #3f7e44; color: white; }
+.g14 { background: #0a97d9; color: white; }
+.g15 { background: #56c02b; color: white; }
+.g16 { background: #00689d; color: white; }
+
+.cake-item {
+    cursor: pointer;
+    transition: transform 0.35s ease,
+                opacity 0.35s ease,
+                filter 0.35s ease;
+}
+
+.wedding-cake.has-active .cake-item {
+    opacity: 0.35;
+    filter: grayscale(0.5);
+}
+
+.wedding-cake.has-active .cake-item.active {
+    opacity: 1;
+    filter: none;
+    transform: scale(1.08);
+    z-index: 5;
+}
+
+.cake-info {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    padding: 25px;
+
+    background: white;
+    border-radius: 18px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateX(25px);
+    transition: opacity 0.4s ease,
+                transform 0.4s ease,
+                visibility 0.4s ease;
+}
+
+.cake-info.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.cake-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    font-size: 27px;
+    color: #7e6449;
+    cursor: pointer;
+}
+
+#info-number {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #4c9f38;
+}
+
+#info-title {
+    font-size: 23px;
+    margin: 8px 0;
+    color: #263238;
+}
+
+.cake-caption {
+    max-width: 650px;
+    margin: 25px auto 0;
+    padding: 15px 20px;
+    background: #f3f7f2;
+    border-radius: 10px;
+    color: #526052;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+@media (max-width: 650px) {
+
+    .kondisi-row {
+        flex-direction: column;
+    }
+
+    .gambar,
+    .isi {
+        width: 100%;
+    }
+
+    .wedding-section {
+        padding: 35px 10px;
+    }
+
+    .wedding-heading h2 {
+        font-size: 23px;
+    }
+
+    .wedding-interactive {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .wedding-cake.has-active {
+        transform: none;
+    }
+
+    .economy {
+        width: 75%;
+    }
+
+    .society {
+        width: 90%;
+    }
+
+    .biosphere {
+        width: 100%;
+    }
+
+    .cake-layer {
+        padding: 18px 12px;
+    }
+
+    .goal {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .cake-info {
+        width: 100%;
+        padding: 22px;
+    }
+
+    .wedding-cake.has-active .cake-item.active {
+        transform: scale(1.03);
+    }
+}
+
+.piant{
+    align-items: center;
+    gap: 30px;
+    border-radius: 15px;
+    border: 3px solid #FF92C3;
+    padding: 8px;
+    text-align: left;
+    color: #7e6449;
+    width: 90%;
+    margin: 40px auto;
+    min-height: 200px;
+    padding: 30px 40px;
+
+    background-color: #fffdf0;
+    border-radius: 15px;
+}
+
+.hlip{
+    paint-order: stroke fill;
+    color: #FEE064;
+    text-align: center;
+    font-family: rodger;
+    -webkit-text-stroke: 10px #fffdf0;
+}
+
+@font-face {
+    font-family: rodger;
+    src: url(Love\ Craft.ttf);
+}
+
+@font-face {
+    font-family: clip;
+    src: url(infiilus.otf);
+}
+
+.plip{
+    paint-order: stroke fill;
+    color: #5aa5e7;
+    text-align: center;
+    font-family: clip;
+    -webkit-text-stroke: 10px #fffdf0;
+}
+
+.cent{
+    text-align: center;
+}
+
+.dampak-title {
+    text-align: center;
+    font-size: 30px;
+    margin: 65px 0 35px;
+    color: #26bde2;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 10px #fffdf0;
+}
+
+.dampak-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto 70px;
+    padding: 0 25px;
+}
+
+.dampak-card {
+    flex: 1;
+    padding: 28px 30px;
+    border-radius: 18px;
+    background: #fffdf0;
+    border: 3px solid #9fd861;
+}
+
+.dampak-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 22px;
+}
+
+.dampak-heading i {
+    font-size: 25px;
+}
+
+@font-face {
+    font-family: bab;
+    src: url(bay);
+}
+
+.dampak-heading h2 {
+    font-size: 23px;
+    margin: 0;
+}
+
+.positif .dampak-heading {
+    color: #56c02b;
+}
+
+.tantangan .dampak-heading {
+    color: #FF92C3;
+}
+
+.dampak-card .tablet {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dampak-card .tablet li {
+    position: relative;
+    padding: 12px 0 12px 28px;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #444;
+    border-bottom: 1px solid #fffdf0;
+    font-family: bab;
+}
+
+.dampak-card .tablet li:last-child {
+    border-bottom: none;
+}
+
+.positif .tablet li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    color: #38a879;
+}
+
+.tantangan .tablet li::before {
+    content: "\f071";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    color: #e5a33c;
+}
+
+@media (max-width: 700px) {
+    .dampak-container {
+        flex-direction: column;
+        padding: 0 18px;
+    }
+
+    .dampak-title {
+        font-size: 24px;
+    }
+}
+
+.dampak-card .tablet li {
+    font-family: bab;
+    color: #7e6449;
+}
+
+@font-face {
+    font-family: bab;
+    src: url(Baby\ Doll.ttf);
+}
+
+@font-face {
+    font-family: tenna;
+    src: url(Monkisa-Bold.ttf);
+}
+
+.boxten {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 40px auto;
+}
+
+.pop {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 40px auto;
+}
+
+.hahaho{
+    text-align: center;
+    color: #fcc30b;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 10px #fffdf0;
+}
+
+.row {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    width: 95%;
+    margin: 30px auto;
+}
+
+main.column {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+}
+
+/* KOTAK SIDEBAR */
+aside.column {
+    flex: 0 0 340px;
+    width: 450px;
+    padding: 20px;
+    background-color: #fffdf0;
+    color: #7e6449;
+    border: 3px solid #f5e6a8;
+    border-radius: 18px;
+    text-align: center;
+    align-self: flex-start;
+}
+
+/* ISI SIDEBAR */
+aside h2 {
+    font-family: Jasper;
+    color: #fffdf0;
+    background-color: #5aa5e7;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 0;
+}
+
+aside h3 {
+    font-family: Jasper;
+    color: #FF92C3;
+    margin-bottom: 8px;
+}
+
+aside p {
+    line-height: 1.6;
+    text-align: center;
+}
+
+aside hr {
+    border: none;
+    height: 2px;
+    background-color: #f5e6a8;
+    margin: 18px 0;
+}
+
+/* KARTU INDIKATOR */
+.indicator {
+    background-color: #fff3f8;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 14px;
+    border-left: 4px solid #FF92C3;
+}
+
+.indicator i {
+    color: #FF92C3;
+    font-size: 20px;
+}
+
+.indicator h3 {
+    font-size: 16px;
+    margin: 7px 0;
+}
+
+.indicator p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 850px) {
+    .row {
+        flex-direction: column;
+    }
+
+    main.column,
+    aside.column {
+        width: 100%;
+        flex: auto;
+    }
+}
+
+
+/* SIDEBAR GAMBAR BAGIAN ATAS */
+.top-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    width: 95%;
+    margin: 30px auto;
+}
+
+.top-layout .left-sidebar {
+    flex: 0 0 260px;
+    width: 300px;
+    padding: 15px;
+    background-color: #fffdf0;
+    border: 3px solid #FF92C3;
+    border-radius: 18px;
+}
+
+.top-layout .left-sidebar img {
+    width: 300px;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.top-layout main.column {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+}
+
+@media (max-width: 850px) {
+    .top-layout {
+        flex-direction: column;
+    }
+
+    .top-layout .left-sidebar,
+    .top-layout main.column {
+        width: 300px;
+        flex: auto;
+    }
+}
+
+
+/* SIDEBAR KIRI */
+.top-layout .left-sidebar {
+    flex: 0 0 260px;
+    width: 350px;
+    padding: 15px;
+    background-color: #fffdf0;
+    border: 3px solid #FF92C3;
+    border-radius: 18px;
+}
+
+.left-sidebar h2 {
+    text-align: center;
+    color: #e879aa;
+    font-family: Jasper;
+    margin-top: 5px;
+}
+
+.sidebar-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar-gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 13px;
+    border: 2px solid #f5d5e3;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.sidebar-gallery img:hover {
+    transform: scale(1.03);
+}
+
+.ambil{
+    width: 90%;
+    display: grid;
+    margin: 40px auto;
+    min-height: 300px;
+    padding: 30px 30px;
+    background-color: #fffdf0;
+    border-radius: 12px;
+    border: 3px solid #5aa5e7;
+    gap: 10px;
+    overflow: hidden;
+    margin: 40px auto;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.ambil img{
+    height: 130px;
+    border-radius: 9px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    
+}
+
+.ambil img:hover{
+    transform: scale(1.06);
+}
+
+.what{
+    text-align: center;
+    color: #9fd861;
+    -webkit-text-stroke: 10px #fffdf0;
+    paint-order: stroke fill;
+    font-size: 50px;
+}

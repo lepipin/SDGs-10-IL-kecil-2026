@@ -1,0 +1,312 @@
+.boxy{
+    display: flex;
+}
+
+.script{
+    font-family: amelina;
+    color: #FF92C3;
+}
+
+@font-face {
+    font-family: amelina;
+    src: url(Amelina\ Script.ttf);
+}
+
+.bruh{
+    font-family: cute;
+    color: #FDC95E;
+}
+
+@font-face {
+    font-family: cute;
+    src: url(Relationship\ of\ mélodrame.ttf);
+}
+
+.smul{
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.conveyor {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.conveyor-track {
+    display: flex;
+    width: max-content;
+    gap: 20px;
+
+    animation: scroll 25s linear infinite;
+}
+
+.conveyor-track img {
+    width: 250px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.sixsevennn{
+    color: #64583D;
+    margin: 30px auto;
+    width: 1000px;
+    background-color: #fffdf0;
+    border-radius: 12px;
+    border: 3px solid #FF92C3;
+    padding: 30px;
+    box-sizing: border-box;   
+}
+
+
+/* SOLUTION SECTION */
+
+.solusi-section {
+    width: 90%;
+    margin: 45px auto;
+}
+
+/* HEADING */
+
+.solusi-heading {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #7e6449;
+}
+
+.solusi-heading h1 {
+    font-family: flf;
+    color: #5aa5e7;
+    font-size: 35px;
+    -webkit-text-stroke: 10px #fffdf0;
+    paint-order: stroke fill;
+}
+
+@font-face {
+    font-family: flf;
+    src: url(Love\ Craft.ttf);
+}
+
+.solusi-heading p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* CARD CONTAINER */
+
+.solusi-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* INDIVIDUAL CARD */
+
+.solusi-card {
+    position: relative;
+    background-color: #fffdf0;
+    border: 2px solid #f5f3aa;
+    border-radius: 18px;
+    padding: 28px 25px 35px;
+    color: #7e6449;
+    overflow: hidden;
+    transition: 0.3s ease;
+    min-height: 280px;
+}
+
+.solusi-card:hover {
+    transform: translateY(-8px);
+    border-color: #5aa5e7;
+}
+
+/* ICON */
+
+.solusi-icon {
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0;
+    color: #5aa5e7;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.pink-icon {
+    color: #FF92C3;
+}
+
+.yellow-icon {
+    color: #FDC95E;
+}
+
+.green-icon {
+    color: #9FD35D;
+}
+
+.blue-icon {
+    color: #5aa5e7;
+}
+
+/* TEXT */
+
+.solusi-card h2 {
+    font-family: Jasper;
+    font-size: 19px;
+    margin-bottom: 12px;
+    color: #7e6449;
+}
+
+.solusi-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: left;
+    margin: 0;
+}
+
+/* NUMBER */
+
+.solusi-number {
+    position: absolute;
+    right: 18px;
+    bottom: 5px;
+    font-size: 48px;
+    font-weight: bold;
+    color: rgba(90, 165, 231, 0.12);
+    font-family: Arial;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .solusi-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .solusi-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.action-banner {
+    width: 90%;
+    margin: 45px auto;
+    padding: 35px;
+    background-color: #fffdf0;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: #7e6449;
+    border: 3px solid #5aa5e7;
+}
+
+.action-text {
+    flex: 1;
+    font-family: jasper;
+}
+
+.action-text h1 {
+    font-family: Jasper;
+    color: #9FD35D;
+}
+
+.action-text p,
+.action-text li {
+    line-height: 1.8;
+}
+
+.action-image {
+    width: 35%;
+}
+
+.action-image img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+@media (max-width: 650px) {
+    .action-banner {
+        flex-direction: column;
+    }
+
+    .action-image {
+        width: 100%;
+    }
+}
+
+.sixsevennn {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+}
+
+.kesimpulan-image {
+    flex: 0 0 35%;
+}
+
+.kesimpulan-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.kesimpulan-text {
+    flex: 1;
+}
+
+.kesimpulan-text p {
+    text-align: justify;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .sixsevennn {
+        flex-direction: column;
+    }
+
+    .kesimpulan-image {
+        width: 100%;
+    }
+}
+
+.boxy{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 20px;  
+  -webkit-text-stroke: 10px #fffdf0;
+  paint-order: stroke fill;
+}
+
+body{
+    background-image: url(fondos.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+}
