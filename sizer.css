@@ -1,0 +1,63 @@
+.t5t {
+    width: 95%;
+    height: auto;
+    display: block;
+    margin: 5px auto;
+}
+
+
+.biodata {
+    width: 90%;
+    margin: 40px auto;
+    min-height: 300px;
+    padding: 30px 30px;
+    background-color: #fffdf0;
+    border-radius: 15px;
+    border: 3px solid #FDC95E;
+    padding: 8px;
+}
+
+.ambil{
+    width: 90%;
+    display: grid;
+    margin: 40px auto;
+    min-height: 300px;
+    padding: 30px 30px;
+    background-color: #fffdf0;
+    border-radius: 12px;
+    border: 3px solid #FDC95E;
+    gap: 10px;
+    overflow: hidden;
+    margin: 40px auto;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.ambil img{
+    height: 200px;
+    border-radius: 9px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    
+}
+
+.ambil img:hover{
+    transform: scale(1.06);
+}
+
+.what{
+    text-align: center;
+    color: #5aa5e7;
+    -webkit-text-stroke: 10px #fffdf0;
+    paint-order: stroke fill;
+    font-size: 50px;
+}
+
+body{
+    background-image: url(image\ \(1\).png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+}

@@ -1,0 +1,741 @@
+body{
+    background-image: url(fondos.jpg);
+}
+
+.spin {
+  animation: spin-animation 17s linear infinite;
+  height: 300px;
+  padding: 10px;
+}
+
+@keyframes spin-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ploink{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    text-align: left;
+    color: #7e6449;
+    width: 90%;
+    margin: 40px auto;
+    min-height: 200px;
+    padding: 30px 40px;
+
+    background-color: #fffdf0;
+    border-radius: 15px;
+    border: 3px solid #9FD35D;
+    padding: 8px;
+}
+
+.column.side {
+width: 25%;
+padding: 20px;
+background-color: #fffdf0;
+align-items: center;
+border-radius: 15px;
+color: #7e6449;
+border: 3px solid #5aa5e7;
+}
+
+.column.middle {
+width: 50%;
+border: 3px solid #FDC95E;
+background-color: #fffdf0;
+color: #7e6449;
+padding: 20px 20px;
+border-radius: 15px;
+text-align: justify;
+}
+
+.row::after {
+content: "";
+clear: both;
+}
+
+.ploinked {
+    flex: 1;
+}
+
+.ploinked p {
+    line-height: 1.6;
+    text-align: justify;
+    padding: 10px;
+}
+
+.resized{
+  height: 200px;
+}
+
+@font-face {
+  font-family: fontur;
+  src: url(DK\ Jambo.otf);
+}
+
+.fonter{
+  font-family: fontur;
+  color: #FF92C3;
+}
+
+.tujuh{
+font-family: catur;
+color: #9FD35D;
+}
+
+@font-face {
+  font-family: catur;
+  src: url(Love\ Craft.ttf);
+}
+
+.target-title {
+    text-align: center;
+    color: #5aa5e7;
+    margin-top: 50px;
+    font-family: herl;
+    -webkit-text-stroke: 10px #fffdf0;
+    paint-order: stroke fill;
+}
+
+.target-subtitle {
+    text-align: center;
+    color: #7e6449;
+    margin: 15px 20px 30px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 90%;
+    margin: 30px auto;
+}
+
+.flip-card {
+    background-color: transparent;
+    height: 320px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner,
+.flip-card:focus .flip-inner,
+.flip-card:focus-within .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 18px;
+    border: 3px solid #F57CB4;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Tampilan depan */
+.flip-front {
+    background-color: #fffdf0;
+    color: #7e6449;
+}
+
+.flip-front img {
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.flip-front h3 {
+    color: #F57CB4;
+    margin: 8px;
+}
+
+/* Tampilan belakang */
+.flip-back {
+    background-color: #fff1f7;
+    color: #7e6449;
+    transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-back h3 {
+    color: #F57CB4;
+    font-size: 24px;
+}
+
+.flip-back p {
+    line-height: 1.7;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* Tampilan layar kecil */
+@media screen and (max-width: 800px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.column.side ul {
+    padding-left: 10px;
+    margin-left: 0;
+    font-family: calt;
+}
+
+@font-face {
+    font-family: calt;
+    src: url(Baby\ Doll.ttf);
+}
+
+.classpect{
+    font-family: her;
+    color: #FDC95E;
+    font-size: 30px;
+}
+
+@font-face {
+    font-family: her;
+    src: url(Relationship\ of\ mélodrame.ttf);
+}
+
+@font-face {
+    font-family: herl;
+    src: url(Darling.ttf);
+}
+
+@font-face {
+    font-family: face;
+    src: url(PlayfairDisplaySC-Regular.ttf);
+}
+
+.class{
+    font-family: face;
+    color: #F57CB4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.t5t {
+    width: 95%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.carrot {
+    text-align: center;
+    font-family: play;
+    color: #FDC95E;
+    font-size: 40px;
+
+    -webkit-text-stroke: 5px #fffdf0;
+    paint-order: stroke fill;
+
+    margin: 15px 0 10px;
+}
+
+.header + .t5t {
+    margin-top: 0;
+}
+
+.t5t + .carrot {
+    margin-top: 10px;
+}
+
+.kondisi {
+    width: 90%;
+    margin: 15px auto;
+}
+
+.kondisi-row {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.flez {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.flez > div {
+    width: 100%;
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 3px;
+}
+
+.flez img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.colr {
+    border: 3px solid #FF92C3;
+}
+
+.coul {
+    border: 3px solid #FDC95E;
+}
+
+.poul {
+    border: 3px solid #5aa5e7;
+}
+
+.teks-kondisi {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.isi {
+    background-color: #fffdf0;
+    color: #7e6449;
+    border-radius: 12px;
+    padding: 25px;
+    width: 100%;
+}
+
+.isi h2 {
+    margin-top: 0;
+}
+
+.isi p {
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.pad3 {
+    background-color: #fffdf0;
+    border: 3px solid #FF92C3;
+    border-radius: 15px;
+
+    width: 90%;
+    min-height: 200px;
+
+    margin: 40px auto;
+    padding: 30px 40px;
+
+    color: #7e6449;
+}
+
+.huh {
+    color: #FDC95E;
+    font-family: sixsev;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.pad3 p {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.section-card {
+    background-color: #fffdf0;
+    border-radius: 15px;
+
+    width: 90%;
+    margin: 30px auto;
+    padding: 25px 35px;
+
+    color: #7e6449;
+}
+
+.section-card h2 {
+    font-family: beau;
+    color: #5aa5e7;
+}
+
+.section-card p {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.dampak {
+    border: 3px solid #FDC95E;
+}
+
+.pihak {
+    border: 3px solid #5aa5e7;
+}
+
+@font-face {
+    font-family: play;
+    src: url("Love Craft.ttf");
+}
+
+@font-face {
+    font-family: beau;
+    src: url("infiilus.otf");
+}
+
+@font-face {
+    font-family: sixsev;
+    src: url("DK Jambo.otf");
+}
+
+@font-face {
+    font-family: beaut;
+    src: url("Amelina Script.ttf");
+}
+
+@font-face {
+    font-family: telow;
+    src: url("Ragniart.ttf");
+}
+
+@media (max-width: 768px) {
+
+    .pada,
+    .pad3,
+    .section-card {
+        width: 94%;
+        padding: 20px;
+    }
+
+    .kondisi {
+        width: 94%;
+    }
+
+    .kondisi-row {
+        grid-template-columns: 1fr;
+    }
+
+    .flez {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flez > div {
+        height: 160px;
+    }
+
+    .fld {
+        font-size: 18px;
+    }
+
+    .carrot {
+        font-size: 32px;
+    }
+
+    .isi {
+        padding: 18px;
+    }
+
+    .isi h2 {
+        font-size: 23px;
+    }
+}
+
+@font-face {
+    font-family: seg;
+    src: url(Darling.ttf);
+}
+
+.section-card h2 {
+    color: #FF92C3;
+    font-family: seg;
+    font-size:34px;
+    margin-bottom: 15px;
+}
+
+.section-card p {
+    color: #444;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.section-card:hover {
+    transform: translateY(-8px);
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.falsity{
+    border: 3px solid #5aa5e7;
+    border-radius: 12px;
+}
+
+.cruelty{
+    border: 3px solid #FF92C3;
+    border-radius: 12px;
+}
+
+.skibid{
+    color: #9FD35D;
+    font-family: kris;
+    font-size: 30px;
+}
+
+.heir{
+    color: #FDC95E;
+    font-size: 30;
+    font-family: cat;
+}
+
+@font-face {
+    font-family: cat;
+    src: url(infiilus.otf);
+}
+
+@font-face {
+    font-family: kris;
+    src: url(DK\ Jambo.otf);
+}
+
+.polr{
+     border: 3px solid #9FD35D;
+}
+
+
+.pancasila-section {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.title {
+    text-align: center;
+    color: #FF92C3;
+    font-family: pug;
+    font-size: 38px;
+    margin-bottom: 15px;
+    -webkit-text-stroke: 10px #fffdf0;
+    paint-order: stroke fill;
+}
+
+@font-face {
+    font-family: pug;
+    src: url(Ragniart.ttf);
+}
+
+.pancasila-intro {
+    text-align: center;
+    color: #7e6449;
+    line-height: 1.8;
+    width: 85%;
+    margin: 0 auto 30px;
+}
+
+.pancasila-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.pancasila-card {
+    background-color: #fffdf0;
+    border: 3px solid #9FD35D;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    color: #7e6449;
+    transition: 0.3s ease;
+}
+
+.pancasila-card:hover {
+    transform: translateY(-7px);
+    background-color: #fff5df;
+}
+
+.pancasila-card h2 {
+    color: #F57CB4;
+    font-family: Jasper;
+}
+
+.pancasila-card h3 {
+    color: #FDC95E;
+}
+
+.pancasila-card p {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .pancasila-container {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .pancasila-intro {
+        width: 100%;
+    }
+}
+
+
+.info-section {
+    width: 90%;
+    margin: 40px auto;
+}
+
+.info-title {
+    text-align: center;
+    color: #F57CB4;
+    font-family: halp;
+    font-size: 38px;
+    margin-bottom: 30px;
+    -webkit-text-stroke: 10px #fffdf0;
+    paint-order: stroke fill;
+}
+
+@font-face {
+    font-family: halp;
+    src: url(MORVA.ttf);
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background-color: #fffdf0;
+    border-radius: 15px;
+    padding: 22px 30px;
+    border-left: 7px solid;
+    transition: 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateX(7px);
+}
+
+.info-icon {
+    min-width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.info-box h2 {
+    font-family: Jasper;
+    margin: 0 0 10px;
+    color: #7e6449;
+}
+
+.info-box p {
+    color: #7e6449;
+    line-height: 1.7;
+    text-align: justify;
+    margin: 0;
+}
+
+.dampak-box {
+    border-color: #FDC95E;
+}
+
+.dampak-box .info-icon {
+    background-color: #fff1cf;
+    color: #e7ad42;
+}
+
+.pihak-box {
+    border-color: #5aa5e7;
+}
+
+.pihak-box .info-icon {
+    background-color: #e6f2ff;
+    color: #5aa5e7;
+}
+
+.solusi-box {
+    border-color: #9FD35D;
+}
+
+.solusi-box .info-icon {
+    background-color: #eaf5dc;
+    color: #81ad4c;
+}
+
+@media (max-width: 600px) {
+    .info-box {
+        align-items: flex-start;
+        padding: 18px;
+        gap: 15px;
+    }
+
+    .info-icon {
+        min-width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+
+    .info-title {
+        font-size: 30px;
+    }
+}
+
+.pancasila-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 5px auto 12px;
+    display: block;
+}
+
+#pengertian,
+#sdgs10,
+#target,
+#masalah,
+#pancasila,
+#dampak {
+    scroll-margin-top: 100px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
