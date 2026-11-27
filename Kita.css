@@ -74,3 +74,147 @@ p.Eksternal {
     font-family: clih;
     src: url(DK\ Jambo.otf);
 }
+
+/* REFLECTION SECTION */
+.reflection {
+    max-width: 1050px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+/* JUDUL */
+.reflection-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.reflection-heading span {
+    font-family: jaz;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #FF92C3;
+}
+
+.reflection-heading h1 {
+    font-family: jazz;
+    font-size: 38px;
+    color: #9FD35D;
+    margin: 8px 0;
+    -webkit-text-stroke: 5px #fffdf0;
+    paint-order: stroke fill;
+}
+
+.reflection-heading p {
+    font-family: jaz;
+    color: #64583D;
+    font-size: 16px;
+}
+
+/* KARTU REFLEKSI */
+.reflection-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.reflection-card {
+    padding: 30px;
+    background-color: #fffdf0;
+    border-radius: 18px;
+    border: 3px solid;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+
+.reflection-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 18px rgba(126, 100, 73, 0.15);
+}
+
+.learning {
+    border-color: #5aa5e7;
+}
+
+.challenge {
+    border-color: #FF92C3;
+}
+
+/* ICON */
+.reflection-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.learning .reflection-icon {
+    background-color: #dceeff;
+    color: #5aa5e7;
+}
+
+.challenge .reflection-icon {
+    background-color: #ffe1ed;
+    color: #FF92C3;
+}
+
+/* TEKS */
+.reflection-card h2 {
+    font-family: clih;
+    color: #5aa5e7;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.challenge h2 {
+    color: #FF92C3;
+}
+
+.reflection-card p {
+    font-family: jaz;
+    color: #64583D;
+    font-size: 15px;
+    line-height: 1.9;
+    text-align: justify;
+    margin: 0;
+}
+
+/* PENUTUP */
+.reflection-ending {
+    margin: 25px auto;
+    padding: 17px;
+    background-color: #fafc7c;
+    border-radius: 12px;
+    text-align: center;
+    color: #7e6449;
+}
+
+.reflection-ending i {
+    color: #FDC95E;
+    margin-right: 8px;
+}
+
+.reflection-ending p {
+    display: inline;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: jazz;
+    src: url(MORVA.ttf);
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    .reflection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reflection {
+        margin: 30px auto;
+        padding: 15px;
+    }
+}
